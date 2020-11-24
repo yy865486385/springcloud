@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
+@RequestMapping("/s1")
 public class Provider {
 
     public static void main(String[] args) {

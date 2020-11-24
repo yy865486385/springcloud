@@ -7,8 +7,14 @@ server:
 spring:
   application:
     name: gateway
-zuul:
-  routes:
-    api:
-      path: /api/**
-      serviceId: provider1,provider2
+  cloud:
+    gateway:
+      routes:
+        - id: provider1
+          uri: lb://provider1
+          predicates:
+          - Path=/s1/**
+        - id: provider2
+          uri: lb://provider2
+          predicates:
+          - Path=/s2/**
