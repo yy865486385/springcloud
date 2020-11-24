@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  application:
+    name: provider2
+  cloud:
+    config:
+      uri: http://localhost:8764
+      label: master
+      profile: dev

@@ -34,8 +34,8 @@ public class Provider2 {
     @Autowired
     private Provider1Client provider1Client;
 
-    @RequestMapping("/home")
-    public String home(String name) {
+    @RequestMapping("/home/{name}")
+    public String home(@PathVariable("name") String name) {
         return "hi "+name+",i am provider2 from port:" +port;
     }
 

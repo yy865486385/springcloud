@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-server  # 应用名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///D:/java-project/local/cloudconfig
